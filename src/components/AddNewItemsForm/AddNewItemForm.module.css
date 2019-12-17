@@ -1,0 +1,17 @@
+.AddNewItemForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonAdd {
+
+}
+
+/*.filter-active {*/
+/*    background-color: blue;*/
+/*}*/
+
+/*.error {*/
+/*    border-color: red;*/
+/*}*/
