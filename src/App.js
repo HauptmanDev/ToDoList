@@ -1,54 +1,30 @@
 import React from 'react';
 import './App.css';
-import style from './components/AddNewItemsForm/AddNewItemForm.module.css'
-import TodoList from "./components/TodoList";
-import {connect} from "react-redux";
-import {addTodoLists, loadTodoLists} from "./reducer";
-import Header from "./components/Header/Header";
+import MainComponent from "./components/MainComponent";
 
 class App extends React.Component {
 
-    state = {
-        todolists: []
-    };
-
-    componentDidMount() {
-        this.restoreState();
-    };
-
-    restoreState = () => {
-        this.props.loadTodoLists()
-    };
-
-    addTodoList = (title) => {
-        this.props.addTodoLists(title);
-    };
-
     render = () => {
-        const todolists = this.props
-            .todolists
-            .map(tl => <TodoList key={tl.id} id={tl.id} title={tl.title} tasks={tl.tasks}/>);
-
         return (
-            <div className='App'>
-                <div className='title'>
-                    <Header addItem={this.addTodoList}/>
-                </div>
-                <div className='lists'>
-                    {todolists}
-                </div>
-
-            </div>
+            <>
+                <main className='wrapper'>
+                    <div className='blur'>{}</div>
+                    <div className='Title'>
+                        Todolist
+                    </div>
+                    <div className='App'>
+                        <MainComponent/>
+                    </div>
+                </main>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="blur">
+                        <feGaussianBlur stdDeviation="5"/>
+                    </filter>
+                </svg>
+            </>
         );
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        todolists: state.todolists
-    }
-};
-
-const ConnectedApp = connect(mapStateToProps, {loadTodoLists, addTodoLists})(App);
-export default ConnectedApp;
+export default App;
 

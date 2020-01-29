@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Header.module.css";
-import AddNewItemForm from "../AddNewItemsForm/AddNewItemForm";
+import AddNewItemForm from "./AddNewItemsForm/AddNewItemForm";
 
 
 function Header(props) {

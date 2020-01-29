@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../components/AddNewItemsForm/AddNewItemForm.module.css';
+import style from './AddNewItemForm.module.css';
 
 class AddNewItemForm extends React.Component {
     state = {

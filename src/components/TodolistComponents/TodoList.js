@@ -1,9 +1,8 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import TodoListTasks from "./TodoListTasks";
 import TodoListFooter from "./TodoListFooter";
 import TodoListTitle from "./TodoListTitle";
-import AddNewItemForm from "./AddNewItemsForm/AddNewItemForm";
 import {connect} from "react-redux";
 import {
     addTasks,
@@ -12,7 +11,8 @@ import {
     loadTasks,
     updateTasks,
     updateTodoListTitle
-} from "./../reducer";
+} from "./../bll/reducer";
+import AddNewItemForm from "../Header/AddNewItemsForm/AddNewItemForm";
 
 
 class TodoList extends React.Component {
