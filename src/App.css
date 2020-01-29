@@ -1,39 +1,60 @@
 .wrapper {
     position: relative;
-    margin: 0 auto;
-    background: fixed 100vh 100vw;
+    width: 100vw;
+    height: 100vh;
 }
 
 .App,
-.Title,
 .blur {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .App {
     z-index: 2;
-}
-
-.Title {
-    z-index: 2;
-    color: #fff;
-    font-size: 50px;
-    font-family: 'Kanit', sans-serif;
-    text-align: left;
-    text-shadow: 0 0 5px rgba(0,0,0,.5);
-    margin-left: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 
 .blur {
     z-index: 1;
     background-image: url(./assets/images/29978-tehnicheskaya_podderzhka-dizajn_interera-rabochij_stol-mebel-tablica-5616x3744.jpg);
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     /*filter: blur(1px);*/
-    position: fixed;
+}
+
+
+.HeaderPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.Title {
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Kanit', sans-serif;
+    text-align: left;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

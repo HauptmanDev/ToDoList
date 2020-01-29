@@ -1,38 +1,27 @@
 .todolist {
     display: flex;
-    width: 100vw;
-    height: 100vh;
     flex-wrap: wrap;
 }
 
 .title {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
+.lists {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
 
-
-/*.lists {*/
-/*    display: flex;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    z-index: 0;*/
-/*    position: relative;*/
-/*    border: 1px black;*/
-/*}*/
-
-/*.list {*/
-/*    z-index: 1;*/
-/*    position: absolute;*/
-/*    background: rgba(0, 0, 0, 0.2);*/
-/*    width: 200px;*/
-/*    height: 200px;*/
-/*    background: inherit;*/
-/*    overflow: hidden;*/
-/*    filter: blur(1px);*/
-/*    filter: url(#blur-filter);*/
-/*}*/
+.list {
+    padding: 10px;
+    /*background: inherit;*/
+    /*overflow: hidden;*/
+    /*filter: blur(1px);*/
+    /*filter: url(#blur-filter);*/
+}
 
 /*.todoList {*/
 /*  width: 300px;*/
