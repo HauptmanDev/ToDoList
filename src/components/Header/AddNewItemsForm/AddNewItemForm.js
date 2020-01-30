@@ -1,5 +1,8 @@
 import React from 'react';
 import style from './AddNewItemForm.module.css';
+import Modal from "../Modal_Input/ModalInput";
+import {Input} from "antd";
+import {Button} from 'antd';
 
 class AddNewItemForm extends React.Component {
     state = {
@@ -15,7 +18,6 @@ class AddNewItemForm extends React.Component {
     onAddItemClick = () => {
         let newText = this.state.title;
         this.setState({title: ""});
-
         if (newText === "") {
             this.setState({error: true});
         } else {
@@ -23,6 +25,10 @@ class AddNewItemForm extends React.Component {
             this.props.addItem(newText);
             this.setState({show: false});
         }
+    };
+
+    closeInput = () => {
+        this.setState({show: false});
     };
     onTitleChanged = (e) => {
         this.setState({
@@ -44,14 +50,23 @@ class AddNewItemForm extends React.Component {
                 {this.state.show ?
                     <>
                         <div>
-                            <input className={classNameForInput} type="text" placeholder="New item name"
-                                   onChange={this.onTitleChanged}
-                                   onKeyPress={this.onKeyPress}
-                                   value={this.state.title}
-                            />
-                        </div>
-                        <div className={style.buttonAdd}>
-                            <button onClick={this.onAddItemClick}>Add</button>
+                            <Modal blackout={true}>
+                                <div className={style.inputForm}>
+                                    <div>
+                                        <Input className={classNameForInput} type="text"
+                                               onChange={this.onTitleChanged}
+                                               onKeyPress={this.onKeyPress}
+                                               value={this.state.title}
+                                        />
+                                    </div>
+                                    <div className={style.kbuttonAdd}>
+                                        <Button onClick={this.onAddItemClick}>Add</Button>
+                                    </div>
+                                    <div>
+                                        <Button onClick={this.closeInput}>Close</Button>
+                                    </div>
+                                </div>
+                            </Modal>
                         </div>
                     </>
                     :

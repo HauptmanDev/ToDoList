@@ -2,22 +2,8 @@
     align-items: center;
     justify-content: space-between;
     display: flex;
-    /*position: fixed;*/
 }
 
-/*.container {*/
-/*  width: 80%;*/
-/*  !*border: 1px solid;*!*/
-/*  display: flex;*/
-/*  justify-content: flex-end;*/
-/*  align-items: center;*/
-/*}*/
+.headerItem {
 
-/*.logo {*/
-/*    width: 50%;*/
-/*}*/
-
-/*.headerItem {*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*}*/
+}
