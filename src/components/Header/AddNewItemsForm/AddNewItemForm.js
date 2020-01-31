@@ -52,18 +52,20 @@ class AddNewItemForm extends React.Component {
                         <div>
                             <Modal blackout={true}>
                                 <div className={style.inputForm}>
-                                    <div>
+                                    <span>Please, write list name</span>
+                                    <div className={style.input}>
                                         <Input className={classNameForInput} type="text"
                                                onChange={this.onTitleChanged}
                                                onKeyPress={this.onKeyPress}
-                                               value={this.state.title}
-                                        />
+                                               value={this.state.title}/>
                                     </div>
-                                    <div className={style.kbuttonAdd}>
-                                        <Button onClick={this.onAddItemClick}>Add</Button>
-                                    </div>
-                                    <div>
-                                        <Button onClick={this.closeInput}>Close</Button>
+                                    <div className={style.buttonConsole}>
+                                        <div className={style.buttonAdd}>
+                                            <Button onClick={this.onAddItemClick}>Add</Button>
+                                        </div>
+                                        <div>
+                                            <Button onClick={this.closeInput}>Close</Button>
+                                        </div>
                                     </div>
                                 </div>
                             </Modal>

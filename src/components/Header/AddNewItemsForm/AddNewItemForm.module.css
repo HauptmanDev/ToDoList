@@ -6,6 +6,18 @@
 
 .inputForm {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding: 10px;
+}
+
+.buttonConsole{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }

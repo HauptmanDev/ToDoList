@@ -4,6 +4,7 @@ import MainComponent from "./components/MainComponent";
 import {connect} from "react-redux";
 import {addTodoLists, loadTodoLists} from "./components/bll/reducer";
 import Header from "./components/Header/Header";
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 class App extends React.Component {
     componentDidMount() {
@@ -26,8 +27,8 @@ class App extends React.Component {
                     <div className='App'>
                         <div className='HeaderPart'>
                             <div className='Title'>
-                            Todolist
-                        </div>
+                                ToDoList
+                            </div>
                             <div className='Header'>
                                 <Header addItem={this.addTodoList}/>
                             </div>
