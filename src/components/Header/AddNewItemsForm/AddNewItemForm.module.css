@@ -11,6 +11,14 @@
     align-items: center;
 }
 
+.appeal {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    text-align: left;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
 .input {
     padding: 10px;
 }

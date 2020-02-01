@@ -52,7 +52,7 @@ class AddNewItemForm extends React.Component {
                         <div>
                             <Modal blackout={true}>
                                 <div className={style.inputForm}>
-                                    <span>Please, write list name</span>
+                                    <span className={style.appeal}>Please, write list name</span>
                                     <div className={style.input}>
                                         <Input className={classNameForInput} type="text"
                                                onChange={this.onTitleChanged}
@@ -61,7 +61,7 @@ class AddNewItemForm extends React.Component {
                                     </div>
                                     <div className={style.buttonConsole}>
                                         <div className={style.buttonAdd}>
-                                            <Button onClick={this.onAddItemClick}>Add</Button>
+                                            <Button onClick={this.onAddItemClick} style={{}}>Add</Button>
                                         </div>
                                         <div>
                                             <Button onClick={this.closeInput}>Close</Button>

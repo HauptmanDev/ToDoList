@@ -33,7 +33,7 @@ class App extends React.Component {
                                 <Header addItem={this.addTodoList}/>
                             </div>
                         </div>
-                        <div>
+                        <div className='TasksTable'>
                             <MainComponent/>
                         </div>
                     </div>

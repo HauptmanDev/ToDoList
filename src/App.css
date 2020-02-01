@@ -20,6 +20,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .blur {
@@ -36,7 +38,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
+    height: 20vh;
 }
 
 .Title {
@@ -45,16 +47,25 @@
     font-family: 'Kanit', sans-serif;
     text-align: left;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Header {
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.TasksTable {
+    /*border: 5px solid firebrick;*/
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
