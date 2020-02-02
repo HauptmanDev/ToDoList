@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../App.css';
-import TodoListTasks from "./TodoListTasks";
-import TodoListFooter from "./TodoListFooter";
-import TodoListTitle from "./TodoListTitle";
+import '../../../App.css';
+import TodoListTasks from "./../TodoListTasks";
+import TodoListFooter from "./../TodoListFooter";
+import TodoListTitle from "./../TodoListTitle";
 import {connect} from "react-redux";
 import {
     addTasks,
@@ -11,8 +11,8 @@ import {
     loadTasks,
     updateTasks,
     updateTodoListTitle
-} from "./../bll/reducer";
-import AddNewItemForm from "../Header/AddNewItemsForm/AddNewItemForm";
+} from "./../../bll/reducer";
+import AddNewTaskForm from "../AddNewTaskForm";
 
 
 class TodoList extends React.Component {
@@ -87,7 +87,7 @@ class TodoList extends React.Component {
                 <div className="todoList-header">
                     <TodoListTitle title={this.props.title} onDelete={this.deleteTodolist}
                                    updateTitle={this.updateTitle}/>
-                    <AddNewItemForm addItem={this.addTask}/>
+                    <AddNewTaskForm addItem={this.addTask}/>
                 </div>
 
                 <TodoListTasks changeStatus={this.changeStatus}

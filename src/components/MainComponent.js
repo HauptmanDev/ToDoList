@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './MainComponent.module.css';
 import {connect} from "react-redux";
-import TodoList from "./TodolistComponents/TodoList";
+import TodoList from "./TodolistComponents/TodoList/TodoList";
 
 class MainComponent extends React.Component {
     render = () => {
