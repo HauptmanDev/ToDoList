@@ -11,7 +11,6 @@ class MainComponent extends React.Component {
 
         return (
             <div className={style.lists}>
-                <div className='backgroundList'></div>
                     {todolists}
             </div>
         );

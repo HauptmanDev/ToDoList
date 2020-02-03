@@ -46,34 +46,32 @@ class AddNewTaskForm extends React.Component {
         let classNameForInput = this.state.error ? "error" : "";
         return (
             <div className={style.AddNewTaskForm}>
-                {/*{this.state.show ?*/}
-                {/*    <>*/}
-                {/*        <div>*/}
-                {/*            <Modal blackout={true}>*/}
-                {/*                <div className={style.inputForm}>*/}
-                {/*                    <span className={style.appeal}>Please, write list name</span>*/}
-                {/*                    <div className={style.input}>*/}
-                {/*                        <Input className={classNameForInput} type="text"*/}
-                {/*                               onChange={this.onTitleChanged}*/}
-                {/*                               onKeyPress={this.onKeyPress}*/}
-                {/*                               value={this.state.title}/>*/}
-                {/*                    </div>*/}
-                {/*                    <div className={style.buttonConsole}>*/}
-                {/*                        <div className={style.buttonAdd}>*/}
-                {/*                            <Button onClick={this.onAddItemClick} style={{}}>Add</Button>*/}
-                {/*                        </div>*/}
-                {/*                        <div>*/}
-                {/*                            <Button onClick={this.closeInput}>Close</Button>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                </div>*/}
-                {/*            </Modal>*/}
-                {/*        </div>*/}
-                {/*    </>*/}
-                {/*    :*/}
-                {/*    <div className={style.posButton}>*/}
-                {/*        <button className={style.buttonSend} onClick={this.onClickShowForm}>Add New List</button>*/}
-                {/*    </div>}*/}
+                {this.state.show ?
+                    <>
+                        <div>
+                                <div className={style.inputForm}>
+                                    <span className={style.appeal}>Please, write list name</span>
+                                    <div className={style.input}>
+                                        <Input className={classNameForInput} type="text"
+                                               onChange={this.onTitleChanged}
+                                               onKeyPress={this.onKeyPress}
+                                               value={this.state.title}/>
+                                    </div>
+                                    <div className={style.buttonConsole}>
+                                        <div className={style.buttonAdd}>
+                                            <Button onClick={this.onAddItemClick} style={{}}>Add</Button>
+                                        </div>
+                                        <div>
+                                            <Button onClick={this.closeInput}>Close</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </>
+                    :
+                    <div className={style.posButton}>
+                        <button className={style.buttonSend} onClick={this.onClickShowForm}>Add New Task</button>
+                    </div>}
             </div>
         );
     }
