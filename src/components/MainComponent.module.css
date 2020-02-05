@@ -14,20 +14,33 @@
 
 .list {
     z-index: 2;
+    border: 1px solid white;
     border-radius: 20px;
     height: 35vh;
-    width: 21.5vw;
+    width: 29vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(150,150,150,0.5);
+    flex-wrap: wrap;
+    background-color: rgba(150, 150, 150, 0.5);
     margin: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-
+    overflow-y: scroll;
     /*background: inherit;*/
     /*overflow: hidden;*/
     /*filter: blur(1px);*/
     /*filter: url(#blur-filter);*/
+}
+
+@media screen and (max-width: 650px) {
+    .lists {
+        flex-direction: column;
+        align-items: center;
+    }
+    .list {
+        height: 35vh;
+        width: 80vw;
+    }
 }
 
 /*.todoList {*/
