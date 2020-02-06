@@ -2,6 +2,8 @@
     position: relative;
     min-width: 100vw;
     min-height: 100vh;
+    display: flex;
+    overflow-y: auto;
 }
 
 .App,
@@ -21,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .blur {
@@ -31,7 +33,6 @@
     background-repeat: no-repeat;
     filter: blur(2px);
 }
-
 
 .HeaderPart {
     display: flex;
@@ -62,38 +63,33 @@
 
 .TasksTable {
     /*border: 5px solid firebrick;*/
-    width: 90vw;
-    height: 80vh;
+    width: 100vw;
+    height: 75vh;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    overflow-y: auto;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 50px;
-
-}
-
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    height: 100%;
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    height: 5px;
-    width: 5px;
+.Footer {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 @media screen and (max-width: 650px) {
     .HeaderPart {
         flex-direction: column;
     }
-    .blur{
+
+    .blur {
         width: auto;
     }
 }

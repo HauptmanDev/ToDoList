@@ -36,6 +36,7 @@ class App extends React.Component {
                         <div className='TasksTable'>
                             <MainComponent/>
                         </div>
+                        <div className='Footer'>2020 © Все права защищены.</div>
                     </div>
                 </main>
             </div>
