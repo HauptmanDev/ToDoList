@@ -5,7 +5,7 @@
   "dependencies": {
     "@ant-design/pro-layout": "^5.0.0",
     "antd": "^3.26.7",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-layout": "^1.1.0",
